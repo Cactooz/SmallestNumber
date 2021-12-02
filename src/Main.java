@@ -16,46 +16,5 @@ public class Main {
 		if (element.length == 0)
 			throw new IllegalArgumentException ("Empty array");
 		
-		//Calculate the pairs and elements
-		int[] sequence = element;
-		int pairs = sequence.length / 2;
-		int unpairedElements = sequence.length % 2;
-		int possibleElements = pairs + unpairedElements;
-		int[] partSequence = new int[possibleElements];
-		int i = 0;
-		int j = 0;
-		
-		while (pairs >= 1)
-		{
-			//Get the partSequence with the possible elements
-			i = 0;
-			j = 0;
-			while (j < pairs)
-			{
-				if(sequence[i] < sequence[i+1]) {
-					partSequence[j++] = sequence[i];
-				}
-				else {
-					partSequence[j++] = sequence[i+1];
-				}
-				
-				i += 2;
-			}
-			if (unpairedElements == 1) {
-				partSequence[j] = sequence[i];
-				if(partSequence[0] > sequence[i]) {
-					partSequence[0] = sequence[i];
-				}
-			}
-			
-			//Calculations from the partSequence
-			sequence = partSequence;
-			pairs = possibleElements / 2;
-			unpairedElements = possibleElements % 2;
-			possibleElements = pairs + unpairedElements;
-		}
-		
-		//Return the smallest value
-		return sequence[0];
 	}
 }
