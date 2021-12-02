@@ -18,7 +18,7 @@ public class Main {
 		int i = 0;
 		int j = 0;
 		
-		while (sequence.length > 1)
+		while (pairs >= 1)
 		{
 			//Get the partSequence with the possible elements
 			i = 0;
