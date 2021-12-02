@@ -16,13 +16,16 @@ public class Main {
 		if (element.length == 0)
 			throw new IllegalArgumentException ("Empty array");
 		
+		//Set the min value to the first element
 		int minValue = element[0];
 		
+		//Check if the other elements are smaller than minValue
 		for(int i = 1; i < element.length; i++) {
 			if(element[i] < minValue)
 				minValue = element[i];
 		}
 		
+		//Return the min value
 		return minValue;
 	}
 }
