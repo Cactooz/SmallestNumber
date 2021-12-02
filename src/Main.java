@@ -41,14 +41,12 @@ public class Main {
 		int unpairedElements = sequence.length % 2;
 		int possibleElements = pairs + unpairedElements;
 		int[] partSequence = new int[possibleElements];
-		int i = 0;
-		int j = 0;
 		
 		while (pairs >= 1)
 		{
 			//Get the partSequence with the possible elements
-			i = 0;
-			j = 0;
+			int i = 0;
+			int j = 0;
 			while (j < pairs)
 			{
 				if(sequence[i] < sequence[i+1]) {
