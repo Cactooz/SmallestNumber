@@ -7,11 +7,11 @@ public class Main {
 		}
 		
 		System.out.println("Length: " + array.length);
-		System.out.println("Output: " + min(array));
+		System.out.println("Output: " + minValue(array));
 	}
 	
 	//Returns the min value in the sequence, if the sequence is empty throw IllegalArgumentException
-	public static int min(int[] element) throws IllegalArgumentException
+	public static int minValue(int[] element) throws IllegalArgumentException
 	{
 		if (element.length == 0)
 			throw new IllegalArgumentException ("Empty array");
