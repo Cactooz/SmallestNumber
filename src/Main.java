@@ -16,5 +16,13 @@ public class Main {
 		if (element.length == 0)
 			throw new IllegalArgumentException ("Empty array");
 		
+		int minValue = element[0];
+		
+		for(int i = 1; i < element.length; i++) {
+			if(element[i] < minValue)
+				minValue = element[i];
+		}
+		
+		return minValue;
 	}
 }
