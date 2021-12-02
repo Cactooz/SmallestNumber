@@ -28,8 +28,12 @@ public class Main {
 				partSequence[j++] = (sequence[i] < sequence[i + 1])? sequence[i] : sequence[i + 1];
 				i += 2;
 			}
-			if (unpairedElements == 1)
-				partSequence[j] = sequence[sequence.length - 1];
+			if (unpairedElements == 1) {
+				partSequence[j] = sequence[i];
+				if(partSequence[0] > sequence[i]) {
+					partSequence[0] = sequence[i];
+				}
+			}
 			
 			//Calculations from the partSequence
 			sequence = partSequence;
