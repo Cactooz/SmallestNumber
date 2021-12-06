@@ -60,9 +60,6 @@ public class Main {
 			}
 			if (unpairedElements == 1) {
 				partSequence[j] = sequence[i];
-				if(partSequence[0] > sequence[i]) {
-					partSequence[0] = sequence[i];
-				}
 			}
 			
 			//Calculations from the partSequence
